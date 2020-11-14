@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,400,600">
+
+  <title>Frontend Mentor | Four card feature section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    .heading-info { text-align: center; margin: 0 33%;}
+
+    body {
+      font-size: 15px;
+      font-family: "Poppins", sans-serif;
+      color: hsl(234, 12%, 34%);
+      background-color: hsl(0, 0%, 98%);
+    }
+
+    .card-container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .card-container > div{
+      flex: 0 1 33%;
+    }
+
+    .card--middle{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card{
+      margin: 15px;
+      padding: 5px 25px 25px 25px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      color: hsl(229, 6%, 66%);
+    }
+
+    .card-header{
+      font-weight: 600;
+      color: hsl(234, 12%, 34%);
+      font-size: x-large;
+    }
+    .card > img{
+      float: right;
+    }
+
+    .card--super{
+      border-top: 5px solid hsl(180, 62%, 55%);
+    }
+
+    .card--builder{
+      border-top: 5px solid hsl(0, 78%, 62%);
+    }
+
+    .card--karma{
+      border-top: 5px solid hsl(34, 97%, 64%);
+    }
+
+    .card--calc{
+      border-top: 5px solid hsl(212, 86%, 64%);
+    }
+
+    @media screen and (max-width: 375px){
+      .card-container{
+        flex-direction:column;
+      }
+
+      .heading-info{
+        margin: 0;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="heading-info">
+  <p style="font-size: xx-large; font-weight: 200; padding-bottom: 0px;">Reliable, efficient delivery <br>
+    <span style="font-weight: 600;">Powered by Technology</span></p>
+  <p style="color: hsl(229, 6%, 66%);">Our Artificial Intelligence powered tools use millions of project data points
+  to ensure that your project is successful</p>
+  </div>
+
+  <div class="card-container">
+
+    <div class="card card--super">
+      <p class="card-header">Supervisor</p>
+      <p>Monitors activity to identify project roadblocks</p>
+      <img src="images/icon-supervisor.svg">
+    </div>
+
+    <div class="card--middle">
+      <div class="card card--builder">
+        <p class="card-header">Team Builder</p>
+        <p>Scans our talent network to create the optimal team for your project</p>
+        <img src="images/icon-team-builder.svg">
+      </div>
+      <div class="card card--karma">
+        <p class="card-header">Karma</p>
+        <p>Regularly evaluates our talent to ensure quality</p>
+        <img src="images/icon-karma.svg">
+      </div>
+    </div>
+
+    <div class="card card--calc">
+      <p class="card-header">Calculator</p>
+      <p>Uses data from past projects to provide better delivery estimates</p>
+      <img src="images/icon-calculator.svg">
+    </div>
+  </div>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Eli Slaughter</a>.
+    </p>
+  </footer>
+</body>
+</html>
