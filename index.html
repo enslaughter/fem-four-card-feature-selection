@@ -20,6 +20,20 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      h1,
+      h2 {
+        font-weight: 200;
+        font-size: 36px;
+        line-height: 54px;
+        letter-spacing: 0.25px;
+        color: hsl(232, 12%, 34%);
+        margin: 0;
+      }
+
+      h2 {
+        font-weight: 600;
+      }
+
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -30,7 +44,8 @@
 
       .heading-info {
         text-align: center;
-        margin: 0 33%;
+        width: 540px;
+        margin: auto;
       }
 
       body {
@@ -45,63 +60,136 @@
         padding: 80px 165px;
       }
 
+      .header-paragraph {
+        opacity: 50%;
+        margin: 16px 0 0 0;
+        line-height: 25px;
+        letter-spacing: 0.1px;
+      }
+
       .card-container {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding: 20px 0;
+        padding: 0;
+        margin: 64px 0 0 0;
       }
 
       .card-container > div {
-        flex: 0 1 33%;
+        flex: 0 0 1;
       }
 
       .card--middle {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        margin: 0 30px;
+      }
+
+      .card-middle > div {
+        flex: 0 0 initial;
       }
 
       .card {
-        margin: 15px;
-        padding: 5px 25px 25px 25px;
-        border-radius: 5px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-          0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        color: hsl(229, 6%, 66%);
+        min-width: 350px;
+        max-width: 350px;
+        min-height: 250px;
+        max-height: 250px;
+        padding: 32px;
+        border-radius: 8px;
+        box-sizing: border-box;
+        box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+        background-repeat: no-repeat;
+        background-origin: content-box;
+        background-position: bottom right;
+      }
+
+      .card > p {
+        font-size: 13px;
+        line-height: 23px;
+        opacity: 50%;
+        margin-bottom: 90px;
       }
 
       .card-header {
         font-weight: 600;
         color: hsl(234, 12%, 34%);
-        font-size: x-large;
+        font-size: 20px;
+        line-height: 30px;
+        margin: 0;
       }
       .card > img {
         float: right;
       }
 
       .card--super {
-        border-top: 5px solid hsl(180, 62%, 55%);
+        border-top: 4px solid hsl(180, 62%, 55%);
+        background-image: url("images/icon-supervisor.svg");
       }
 
       .card--builder {
-        border-top: 5px solid hsl(0, 78%, 62%);
+        border-top: 4px solid hsl(0, 78%, 62%);
+        background-image: url("images/icon-team-builder.svg");
       }
 
       .card--karma {
-        border-top: 5px solid hsl(34, 97%, 64%);
+        border-top: 4px solid hsl(34, 97%, 64%);
+        background-image: url("images/icon-karma.svg");
+        margin-top: 30px;
       }
 
       .card--calc {
-        border-top: 5px solid hsl(212, 86%, 64%);
+        border-top: 4px solid hsl(212, 86%, 64%);
+        background-image: url("images/icon-calculator.svg");
       }
 
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 1120px) {
+        h1,
+        h2 {
+          font-size: 24px;
+          line-height: 36px;
+          letter-spacing: 0.17px;
+        }
         .main-container {
           padding: 85px 32px;
         }
+
+        .heading-info {
+          width: inherit;
+        }
+
         .card-container {
+          width: 100%;
           flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: 76px;
+        }
+
+        .card {
+          min-width: inherit;
+          max-width: auto;
+          min-height: inherit;
+          max-height: inherit;
+          width: inherit;
+          box-sizing: border-box;
+          padding: 28px;
+        }
+
+        .card-header {
+          margin: 0;
+        }
+
+        .card--middle,
+        .card--karma {
+          margin: 0;
+        }
+
+        .card--super,
+        .card--builder,
+        .card--karma {
+          margin-bottom: 25px;
         }
 
         .heading-info {
@@ -113,11 +201,9 @@
   <body>
     <div class="main-container">
       <div class="heading-info">
-        <p style="font-size: xx-large; font-weight: 200; padding-bottom: 0px">
-          Reliable, efficient delivery <br />
-          <span style="font-weight: 600">Powered by Technology</span>
-        </p>
-        <p style="color: hsl(229, 6%, 66%)">
+        <h1>Reliable, efficient delivery</h1>
+        <h2>Powered by Technology</h2>
+        <p class="header-paragraph">
           Our Artificial Intelligence powered tools use millions of project data
           points to ensure that your project is successful
         </p>
@@ -125,33 +211,29 @@
 
       <div class="card-container">
         <div class="card card--super">
-          <p class="card-header">Supervisor</p>
+          <h3 class="card-header">Supervisor</h3>
           <p>Monitors activity to identify project roadblocks</p>
-          <img src="images/icon-supervisor.svg" />
         </div>
 
         <div class="card--middle">
           <div class="card card--builder">
-            <p class="card-header">Team Builder</p>
+            <h3 class="card-header">Team Builder</h3>
             <p>
               Scans our talent network to create the optimal team for your
               project
             </p>
-            <img src="images/icon-team-builder.svg" />
           </div>
           <div class="card card--karma">
-            <p class="card-header">Karma</p>
+            <h3 class="card-header">Karma</h3>
             <p>Regularly evaluates our talent to ensure quality</p>
-            <img src="images/icon-karma.svg" />
           </div>
         </div>
 
         <div class="card card--calc">
-          <p class="card-header">Calculator</p>
+          <h3 class="card-header">Calculator</h3>
           <p>
             Uses data from past projects to provide better delivery estimates
           </p>
-          <img src="images/icon-calculator.svg" />
         </div>
       </div>
     </div>
@@ -161,7 +243,8 @@
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Eli Slaughter</a>.
+        >. Coded by
+        <a href="https://elijahslaughter.ca" target="_blank">Eli Slaughter</a>.
       </p>
     </footer>
   </body>
